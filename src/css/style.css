@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --font-size-10: 0.625rem;
+    --font-size-11: 0.688rem;
+    --font-size-12: 0.75rem;
+    --font-size-13: 0.813rem;
+    --font-size-14: 0.875rem;
+    --color-white:#ffff;
+    --color-dark-white:#fafafa;
+    --primary-color: #FB6E6E;
+    --secondary-color: #FEF2F2;
+}
+.fs-10{
+    font-size: var(--font-size-10);
+}
+.fs-11{
+    font-size: var(--font-size-11);
+}
+.fs-12{
+    font-size: var(--font-size-13);
+}
+.fs-13{
+    font-size: var(--font-size-13);
+}
+.fs-14{
+    font-size: var(--font-size-14);
+}
+.c-white{
+   color: var(--color-white); 
+}
+.bg-white{
+    background-color: var(--color-white);
+}
+.c-darkwhite{
+    color: var(--color-dark-white);
+}
+.darkwhite-bg{
+    background: var(--color-dark-white);
+}
+.primary-bg{
+    background: var(--primary-color);
+}
+.c-primary{
+    color: var(--primary-color);
+}
+.c-secondary{
+    color: var(--secondary-color);
+}
+.secondary-bg{
+     background: var(--secondary-color);
+}
+.primary-border{
+    border: 2px solid var(--primary-color);
+}
+.border-none{
+    border: none;
+}
+.link{
+    text-decoration: none;
+}
+.container{
+    transition: all 0.4s;
+    max-width: 1450px;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #fefefe;
+}
+.hero{
+    width: 100%;
+    height: 80dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    background-image: linear-gradient(to bottom, #fff688, #fffdd0, #fefde8);
+    box-shadow: 0px 10px 20px rgba(255, 248, 136, 0.3);
+
+}
+.linear-gradient{
+    background-image: linear-gradient(to bottom, #fff688, #fffdd0, #fefde8);
+}
+.category-list{
+    width: auto;
+    max-width: 95dwv;
+    overflow: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    transition: all 0.4s;
+}
+.category-list::-webkit-scrollbar
+{
+  height: 3px;
+  position: relative; 
+  top: 15px;
+}
+.category-list::-webkit-scrollbar-thumb
+{
+    background-color: var(--darker-white);
+    outline: none;
+}
+#hero{
+    width: 100%;
+    height: 80dvh;
+    background-color: var(--secondary-color);
+    border-radius: 20rem;
+}
+.hero-image{
+    height: 50dvh;
+    width: 100%;
+    object-fit: contain;
+}
+.search-section{
+    height: 20dvh;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-end;
+}
+.input-box{
+    transition: all 0.4s;
+    background-color: #eeee;
+    width: 80%;
+}
+input {
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    box-shadow: none; 
+    border: none; 
+    padding: 0; 
+    margin: 0; 
+  }
+  
+  input:focus {
+    outline: none; 
+    box-shadow: none; 
+  }
+  input{
+    background-color: transparent;
+    width: 75%;
+  }
+  .pet-image{
+    height: 20rem;
+    object-fit: cover;
+  }
+  .login-box{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-container{
+    width: 80%;
+  }
+  .details-img{
+    height: 70dvh;
+  }
+  .contact-img{
+    height: 75dvh;
+  }
+  .badge-lg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 6px var(--secondary-color);
+  }
+  .badge-img{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 4px double #222;
+  }
+  .badge-img-active{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 5px double  #444;
+  }
+  .cart-active{
+    background-image: linear-gradient(to bottom, #fff688, #fffdd0, #fefde8);
+    scale: 1.09;
+  }
+  .icon-color{
+    color: #e29400;
+  }
+  .about-img{
+    width: 100%;
+    border-radius: 10px;
+  }
+  @media screen and (max-width: 945px) {
+     .form-container{
+        width: 100%;
+     }
+     .badge-lg{
+        width: 3rem;
+        height: 3rem;
+     }
+     hr{
+        width: 20% !important;
+     }
+     .display-sm-none{
+      display: none !important;
+    }
+  }
+  @media screen and (min-width: 690px){
+     .display-lg-none{
+      display: none  !important;
+   }
+  }
