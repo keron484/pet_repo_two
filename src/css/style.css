@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 :root{
     --font-size-10: 0.625rem;
     --font-size-11: 0.688rem;
@@ -63,6 +62,7 @@
     transition: all 0.4s;
     max-width: 1450px;
 }
+
 body{
     font-family: "Poppins", sans-serif;
     background-color: #fefefe;
@@ -75,12 +75,31 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
-    background-image: linear-gradient(to bottom, #fff688, #fffdd0, #fefde8);
+    background-color: #fff8af;
     box-shadow: 0px 10px 20px rgba(255, 248, 136, 0.3);
+    transition: all 0.3s;
 
 }
 .linear-gradient{
     background-image: linear-gradient(to bottom, #fff688, #fffdd0, #fefde8);
+}
+
+.link-active::after{
+    content: "";
+    width: 100%;
+    background-color: var(--primary-color);
+    height: 3px;
+    border-radius: 80px;
+    transition: all 0.5s;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.link-inactive:hover{
+    color: var(--primary-color);
+    transition: all 0.35s;
+    text-decoration: none;
 }
 .category-list{
     width: auto;
@@ -102,12 +121,7 @@ body{
     background-color: var(--darker-white);
     outline: none;
 }
-#hero{
-    width: 100%;
-    height: 80dvh;
-    background-color: var(--secondary-color);
-    border-radius: 20rem;
-}
+
 .hero-image{
     height: 50dvh;
     width: 100%;
@@ -133,10 +147,18 @@ input {
     padding: 0; 
     margin: 0; 
   }
-  
+  .form{
+    transition: all 0.4s;
+  }
   input:focus {
     outline: none; 
     box-shadow: none; 
+  }
+  .badge{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
   }
   input{
     background-color: transparent;
@@ -162,6 +184,7 @@ input {
   }
   .contact-img{
     height: 75dvh;
+    width: 100%;
   }
   .badge-lg{
     display: flex;
@@ -196,6 +219,49 @@ input {
     width: 100%;
     border-radius: 10px;
   }
+  .player{
+    width: 18rem;
+    height: 20rem;
+  }
+  .player-comfort{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100%;
+  }
+  .pb-xl{
+     padding-bottom: 20rem;
+  }
+  .profile-img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+  }
+  .selected{
+    color: var(--primary-color);
+    transition: all 0.3s;
+  }
+  .selected::after{
+    content: "";
+    transition: all 0.3s;
+    width: 100%;
+    height: 3px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--primary-color);
+  }
+  .pointer{
+    cursor: pointer;
+  }
+  .logo{
+     width: 100%;
+     height: 2rem;
+  }
   @media screen and (max-width: 945px) {
      .form-container{
         width: 100%;
@@ -209,6 +275,12 @@ input {
      }
      .display-sm-none{
       display: none !important;
+    }
+    .hero{
+      height: 100dvh !important;
+    }
+    .contact-img{
+      display: none;
     }
   }
   @media screen and (min-width: 690px){

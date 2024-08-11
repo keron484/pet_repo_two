@@ -4,6 +4,8 @@ import axios from "../Api/axios";
 import { Spinnerlong } from "../Components/Spinner";
 import { reduce_array_size } from "../Utils/functions";
 import Petcomponent from "../Components/Petcomponent";
+import Frequentlysearched from "../Components/Frequentlysearched";
+import { Helmet } from "react-helmet";
 function Search(){
    const [ loading, setLoading ] = useState(true);
    const [ categories, setCategories ] = useState([]);
@@ -56,6 +58,21 @@ function Search(){
    
     return(
         <>
+                <Helmet>
+        <meta charSet="utf-8" />
+         <title>Search</title>
+         <link rel="canonical" href="https://pethaven.com/" />
+         <meta property="og:title" content="PetHaven - Your Ultimate Pet Adoption Service" />
+         <meta property="og:description" content="Welcome to PetHaven! Discover your perfect furry friend. Join us in giving pets a loving home." />
+         <meta property="og:image" content="https://yourwebsite.com/images/logo.jpg" /> 
+         <meta property="og:url" content="https://pethaven.com/" />
+         <meta property="og:type" content="website" />
+         <meta name="twitter:card" content="summary_large_image" />
+         <meta name="twitter:title" content="PetHaven - Your Ultimate Pet Adoption Service" />
+         <meta name="twitter:description" content="Welcome to PetHaven! Discover your perfect furry friend. Join us in giving pets a loving home." />
+         <meta name="twitter:image" content="https://yourwebsite.com/images/logo.jpg" /> 
+         <meta name="twitter:url" content="https://pethaven.com/" />
+        </Helmet>
 <div className="container pt-5">
     <div className="search-section">
     <div className="d-flex flex-row align-items-center justify-content-center w-100">
@@ -135,89 +152,10 @@ function Search(){
         <>
          <p className="text-start mt-5 fw-bold">
     Frequently searched
- </p>
- <div className="row">
-    <div className="col-lg-3 my-2">
-        <div className="card rounded-3 p-1 border-none shadow-sm ">
-            <div>
-                <img src="image/petimage.jpg" alt="" className="w-100 rounded-top-3 pet-image"/>
-            </div>
-            <div className="d-flex flex-row align-items-center justify-content-between my-2">
-                <h6 className="fw-bold">Pet Name</h6>
-                <button className="secondary-bg btn c-primary fs-10 rounded-pill px-3 py-1">Avialable</button>
-            </div>
-            <div className="d-flex flex-row justify-content-end my-2">
-                <div className="d-block text-center">
-                    <p className="my-0 fs-10 fw-bold">Cost of Adoption</p>
-                    <h4 className="fw-bold">3500 $</h4>
-                </div>
-            </div>
-            <button className="btn primary-bg text-white fw-bold fs-13">
-                Begin Adoption Process
-            </button>
-        </div>
+       </p>
+    <div className="row">
+      <Frequentlysearched />
     </div>
-    <div className="col-lg-3 my-2">
-        <div className="card rounded-3 p-1 border-none shadow-sm ">
-            <div>
-                <img src="image/petimage.jpg" alt="" className="w-100 rounded-top-3 pet-image"/>
-            </div>
-            <div className="d-flex flex-row align-items-center justify-content-between my-2">
-                <h6 className="fw-bold">Pet Name</h6>
-                <button className="secondary-bg btn c-primary fs-10 rounded-pill px-3 py-1">Avialable</button>
-            </div>
-            <div className="d-flex flex-row justify-content-end my-2">
-                <div className="d-block text-center">
-                    <p className="my-0 fs-10 fw-bold">Cost of Adoption</p>
-                    <h2 className="fw-bold">3500 $</h2>
-                </div>
-            </div>
-            <button className="btn primary-bg text-white fw-bold fs-13">
-                Begin Adoption Process
-            </button>
-        </div>
-    </div>
-    <div className="col-lg-3 my-2">
-        <div className="card rounded-3 p-1 border-none shadow-sm ">
-            <div>
-                <img src="image/petimage.jpg" alt="" className="w-100 rounded-top-3 pet-image"/>
-            </div>
-            <div className="d-flex flex-row align-items-center justify-content-between my-2">
-                <h6 className="fw-bold">Pet Name</h6>
-                <button className="secondary-bg btn c-primary fs-10 rounded-pill px-3 py-1">Avialable</button>
-            </div>
-            <div className="d-flex flex-row justify-content-end my-2">
-                <div className="d-block text-center">
-                    <p className="my-0 fs-10 fw-bold">Cost of Adoption</p>
-                    <h4 className="fw-bold">3500 $</h4>
-                </div>
-            </div>
-            <button className="btn primary-bg text-white fw-bold fs-13">
-                Begin Adoption Process
-            </button>
-        </div>
-    </div>
-    <div className="col-lg-3 my-2">
-        <div className="card rounded-3 p-1 border-none shadow-sm ">
-            <div>
-                <img src="image/petimage.jpg" alt="" className="w-100 rounded-top-3 pet-image"/>
-            </div>
-            <div className="d-flex flex-row align-items-center justify-content-between my-2">
-                <h6 className="fw-bold">Pet Name</h6>
-                <button className="secondary-bg btn c-primary fs-10 rounded-pill px-3 py-1">Avialable</button>
-            </div>
-            <div className="d-flex flex-row justify-content-end my-2">
-                <div className="d-block text-center">
-                    <p className="my-0 fs-10 fw-bold">Cost of Adoption</p>
-                    <h4 className="fw-bold">3500 $</h4>
-                </div>
-            </div>
-            <button className="btn primary-bg text-white fw-bold fs-13">
-                Begin Adoption Process
-            </button>
-        </div>
-    </div>
- </div>
         </>
     ) : (
        null

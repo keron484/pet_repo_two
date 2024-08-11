@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuthContext from "../Context/authcontext";
 import { useForm } from "react-hook-form";
 import { Spinnersingle } from "../Components/Spinner";
+import { Icon } from "@iconify/react";
 function Login(){
     const { login, error, msgerror, loading } = useAuthContext();
     const { handleSubmit, register } = useForm();
@@ -25,7 +26,11 @@ function Login(){
                     <div className="d-flex flex-row align-items-center justify-content-between my-2">
                         <p className="my-0"></p>
                         <h4 className="fw-bold">Login</h4>
-                        <p className="my-0">$$</p>
+                        <p className="my-0" onClick={ () => {
+                             navigate("/");
+                        } }>
+                            <Icon icon="fluent-mdl2:cancel" className="fs-3"/>
+                        </p>
                     </div>
                     <div className="my-4">
                         <p className="my-0">Email</p>

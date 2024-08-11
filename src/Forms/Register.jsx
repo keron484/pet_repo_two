@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuthContext from "../Context/authcontext";
 import { useForm } from "react-hook-form";
 import { Spinnersingle } from "../Components/Spinner";
+import { Icon } from "@iconify/react";
 function Register(){
     const { signup, loading,  error, msgerror } = useAuthContext();
     const navigate = useNavigate();
@@ -25,7 +26,11 @@ function Register(){
                     <div className="d-flex flex-row align-items-center justify-content-between mt-4 mb-2">
                         <p className="my-0"></p>
                         <h4 className="fw-bold">Create Account</h4>
-                        <p className="my-0">$$</p>
+                        <p className="my-0" onClick={ () => {
+                             navigate("/");
+                        } }>
+                            <Icon icon="fluent-mdl2:cancel" className="fs-3"/>
+                        </p>
                     </div>
                     <div className="my-4">
                         <p className="my-0">Username</p>
@@ -69,23 +74,6 @@ function Register(){
                         className={error.signup.password ? "border-danger form-control" : "form-control"}
                         name="password"
                         {...register("password")}
-                        />
-                    {
-                        error.signup.password && <div className="text-danger">
-                            {
-                                error.signup.password[0]
-                            }
-                        </div>
-                    }
-                    </div>
-                    <div className="my-4">
-                        <p className="my-0">Password Confrimation</p>
-                        <input 
-                        type="password" 
-                        placeholder="Enter confirm password" 
-                        className={error.signup.password ? "border-danger form-control" : "form-control"}
-                        name="password_confirmation"
-                        {...register("password_confirmation")}
                         />
                     {
                         error.signup.password && <div className="text-danger">

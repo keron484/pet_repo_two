@@ -1,9 +1,11 @@
 import axios from "../Api/axios";
 import { useEffect, useState } from "react";
+import { scrollto } from "../Utils/functions";
 function Category(){
     const [ category, setCategory ] = useState([]);
     const [ error, setError ] = useState(null);
     const [ toggle, setToggle ] = useState("all");
+
     useEffect(() => {
        const handle_fetch = async () => {
            try{
@@ -49,6 +51,7 @@ function Category(){
                      : "secondary-bg primary-border rounded-pill c-primary fs-13 px-3 py-2 cat-btn"}
                       onClick={() => {
                         handle_toggle(items.name)
+                        scrollto(items.name)
                       }}
                      >{items.name}
                      </button>

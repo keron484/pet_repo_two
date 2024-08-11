@@ -1,4 +1,4 @@
-import {createContext, useContext, useState} from 'react';
+import {createContext, useContext, useState, useRef } from 'react';
 import axios from "../Api/axios"
 const AuthContext = createContext({});
 export const AuthProvider = ({children}) => {
@@ -7,6 +7,9 @@ export const AuthProvider = ({children}) => {
     const [ msgerror, setMsgerror ] = useState({ login:null, signup:null });
     const [ loading, setLoading ] = useState({ signup:null, login:null });
     const csrf = () =>  axios.get('/sanctum/csrf-cookie');
+    const aboutRef = useRef(null);
+    const servicesRef = useRef(null);
+    const reviewsRef = useRef(null);
     const getUser = async () => {
         const token = localStorage.getItem('token')
         try{
@@ -72,7 +75,7 @@ export const AuthProvider = ({children}) => {
        }
     }
 
-    return <AuthContext.Provider value={{ loading,  error, msgerror, user,  login, signup, logout, getUser, passwordRecovery}}>
+    return <AuthContext.Provider value={{ loading,  error, msgerror, user,  login, signup, logout, getUser, passwordRecovery, aboutRef, servicesRef, reviewsRef}}>
         {children}
     </AuthContext.Provider>
 }

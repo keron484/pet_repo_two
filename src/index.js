@@ -5,13 +5,20 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import Link from './Routes/Link.jsx';
 import "./css/style.css";
+import { store, persistor } from './Redux/store.jsx';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import { AuthProvider } from './Context/authcontext.jsx';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <PersistGate loading={null} persistor={persistor}>
+    <Provider store={store}>
     <AuthProvider>
     <Link></Link>
     </AuthProvider>
+    </Provider>
+    </PersistGate>
   </React.StrictMode>
 );
 

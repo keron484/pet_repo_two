@@ -5,6 +5,10 @@ import axios from "../Api/axios";
 import { Spinnerlong } from "../Components/Spinner";
 import Petcomponent from "../Components/Petcomponent";
 import { reduce_array_size } from "../Utils/functions";
+import Timeline from "../Components/Timeline";
+import '../Utils/functions';
+import toast from "react-hot-toast";
+import {Helmet} from "react-helmet";
 function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -25,26 +29,42 @@ function Home() {
   }, []);
   return (
     <>
+      <Helmet>
+         <meta charSet="utf-8" />
+         <title>Home</title>
+         <link rel="canonical" href="http://mysite.com/example" />
+         <meta property="og:title" content="PetHaven - Your Ultimate Pet Adoption Service" />
+    <meta property="og:description" content="Welcome to PetHaven! Discover your perfect furry friend. Join us in giving pets a loving home." />
+    <meta property="og:image" content="https://yourwebsite.com/images/logo.jpg" /> 
+    <meta property="og:url" content="https://pethaven.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PetHaven - Your Ultimate Pet Adoption Service" />
+    <meta name="twitter:description" content="Welcome to PetHaven! Discover your perfect furry friend. Join us in giving pets a loving home." />
+    <meta name="twitter:image" content="https://yourwebsite.com/images/logo.jpg" /> 
+    <meta name="twitter:url" content="https://pethaven.com/" />
+      </Helmet>
       <div className="container">
-        <section id="hero">
-          <div className="">
-            <div className="hero px-3 rounded-5 py-2 pt-4">
+        <section>
+            <div className="hero px-1 rounded-5 py-2 pt-4">
+              <div className="container">
               <div className="row d-flex flex-row align-items-center">
                 <div className="col-lg-5">
-                  <p className="fs-5 my-4 fw-bold">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Consectetur
+                  <p className="fs-5 my-4 fw-medium">
+                  Trusted by families, loved by pets. Find your perfect companion at PetHaven!
                   </p>
                   <h1 className="fw-bold">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit
+                  Your new <span style={{ color:"#FF67B9" }}>best friend</span> awaits at PetHaven
+                  where <span style={{ color:"#FF67B9" }}> love </span>, <span style={{ color:"#FF67B9" }}>care</span>, and <span style={{ color:"#FF67B9" }}>
+                  trust
+                    </span> unite!
                   </h1>
                   <p className="fs-6">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Corrupti, odio omnis optio magnam aliquid accusamus
-                    veritatis facere? Vel possimus sit quisquam
+                  At PetHaven, we match loving families with wonderful pets. 
+                  Our team ensures each animal is healthy and ready for adoption!
                   </p>
                   <NavLink to="/pet-list" className="link w-50">
-                    <button className="mt-3 primary-bg btn w-50 text-white rounded-pill py-2">
+                    <button className="mt-3 primary-bg btn w-50 text-white rounded-pill py-3 fw-medium">
                       I want to Adopt
                     </button>
                   </NavLink>
@@ -57,68 +77,46 @@ function Home() {
                   />
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <div className="row">
-            <div className="col-lg-12">
-              <h2 className="fw-bold text-center my-3">How it Works</h2>
-              <div className="d-flex flex-row align-items-center gap-2 justify-content-center my-3">
-                <div className="d-flex flex-column align-items-center text-center gap-3">
-                  <p className="my-0 fw-bold">Step One</p>
-                  <div className="badge-lg primary-bg text-white fw-bold fs-5 c-primary">
-                    1
-                  </div>
-                  <p>Find A Pet</p>
-                </div>
-                <hr className="w-25" />
-                <div className="d-flex flex-column align-items-center gap-3 text-center">
-                  <p className="my-0 fw-bold">Step Two</p>
-                  <div className="badge-lg secondary-bg fw-bold fs-5">2</div>
-                  <p className="my-1 ">Apply For Adoption</p>
-                </div>
-                <hr className="w-25" />
-                <div className="d-flex flex-column align-items-center gap-3 text-center">
-                  <p className="my-0 fw-bold">Step three</p>
-                  <div className="badge-lg secondary-bg fw-bold fs-5">3</div>
-                  <p>Pay for Adoption</p>
-                </div>
               </div>
             </div>
+        </section>
+
+        <section className="mt-5">
+          <h2 className="text-center fw-bold my-4">How it Works</h2>
+          <div className="container py-5">
+            <div className="d-flex flex-row justify-content-center">
+            <Timeline />
+            </div>
           </div>
         </section>
 
-        <section>
+        <section id="about">
           <h2 className="text-center fw-bold my-4">How it started</h2>
           <div className="mx-2">
             <div className="row">
               <div className="col-lg-7">
                 <h4 className="text-start fw-bold mt-4">About Us</h4>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officiis, ullam velit, cum itaque ex, quidem reprehenderit
-                  necessitatibus rem recusandae commodi dicta quas praesentium
-                  eos quaerat illum aliquid eaque optio vero!
+                At PetHaven, we believe every pet deserves a loving home. 
+                Our mission is to make the online pet adoption process easy 
+                and reliable. Our team carefully vets each animal to ensure they 
+                are healthy and ready to find their forever home.
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officiis, ullam velit, cum itaque ex, quidem reprehenderit
-                  necessitatibus rem recusandae commodi dicta quas praesentium
-                  eos quaerat illum aliquid eaque optio vero!
+                We provide detailed profiles for each pet on our website, 
+                including temperament and health history. Virtual meet-and-greets
+                 allow you to connect with potential companions before adopting. 
+                 Our team is always available to answer your questions and provide support
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officiis, ullam velit, cum itaque ex, quidem reprehenderit
-                  necessitatibus rem recusandae commodi dicta quas praesentium
-                  eos quaerat illum aliquid eaque optio vero!
+                Our commitment to adopters doesn't end once you bring your pet home. 
+                We offer resources like training tips and access to a community of fellow 
+                pet owners to help you navigate pet ownership successfully
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officiis, ullam velit, cum itaque ex, quidem reprehenderit
-                  necessitatibus rem recusandae commodi dicta quas praesentium
-                  eos quaerat illum aliquid eaque optio vero!
+                With secure technology and a focus on transparency, PetHaven makes
+                 adoption straightforward and trustworthy. Join us in creating lasting bonds
+                  between pets and their loving families!
                 </p>
               </div>
               <div className="col-lg-5">
@@ -178,7 +176,7 @@ function Home() {
                         />
                       </div>
                     </div>
-                    <h4 className="fw-bold text-center">Username</h4>
+                    <h4 className="fw-bold text-center">Sarah M</h4>
                     <div className="d-flex">
                       <p>
                         <span className="mx-1">
@@ -187,14 +185,10 @@ function Home() {
                             className="fs-4"
                           />
                         </span>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Incidunt labore, laborum corrupti sunt cupiditate
-                        necessitatibus, unde perspiciatis aliqua ipsa error
-                        impedit temporibus, quis voluptatem tempore blanditiis.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Incidunt labore, laborum corrupti sunt cupiditate
-                        necessitatibus, unde perspiciatis aliqua ipsa error
-                        impedit temporibus, quis voluptatem tempore blanditiis.
+                        I cannot express how grateful I am to have found my furry best friend through
+                        PetHaven! The staff was incredibly caring and knowledgeable, helping us find
+                        the perfect match for our family. Our dog, Bella, has brought so much joy 
+                        into our lives. Thank you, PetHaven!
                         <span className="mx-1">
                           <Icon
                             icon="icomoon-free:quotes-right"
@@ -238,7 +232,7 @@ function Home() {
                         />
                       </div>
                     </div>
-                    <h4 className="fw-bold text-center">Username</h4>
+                    <h4 className="fw-bold text-center"> Mark T</h4>
                     <div className="d-flex">
                       <p>
                         <span className="mx-1">
@@ -247,14 +241,10 @@ function Home() {
                             className="fs-4"
                           />
                         </span>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Incidunt labore, laborum corrupti sunt cupiditate
-                        necessitatibus, unde perspiciatis aliqua ipsa error
-                        impedit temporibus, quis voluptatem tempore blanditiis.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Incidunt labore, laborum corrupti sunt cupiditate
-                        necessitatibus, unde perspiciatis aliqua ipsa error
-                        impedit temporibus, quis voluptatem tempore blanditiis.
+                        PetHaven made the adoption process smooth and easy. The team was very 
+                        supportive and answered all our questions. We adopted Max, a playful 
+                        tabby cat, and he has quickly become a beloved member of our family. 
+                        Highly recommend!
                         <span className="mx-1">
                           <Icon
                             icon="icomoon-free:quotes-right"
@@ -298,7 +288,7 @@ function Home() {
                         />
                       </div>
                     </div>
-                    <h4 className="fw-bold text-center">Username</h4>
+                    <h4 className="fw-bold text-center">Jenny L</h4>
                     <div className="d-flex">
                       <p>
                         <span className="mx-1">
@@ -307,14 +297,10 @@ function Home() {
                             className="fs-4"
                           />
                         </span>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Incidunt labore, laborum corrupti sunt cupiditate
-                        necessitatibus, unde perspiciatis aliqua ipsa error
-                        impedit temporibus, quis voluptatem tempore blanditiis.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Incidunt labore, laborum corrupti sunt cupiditate
-                        necessitatibus, unde perspiciatis aliqua ipsa error
-                        impedit temporibus, quis voluptatem tempore blanditiis.
+                        I had a wonderful experience at PetHaven! The facilities were clean,
+                         and the animals were well cared for. The staff took the time to 
+                         understand what I was looking for, and I found Lucy, the sweetest 
+                         Labrador. She fits right in with our family!
                         <span className="mx-1">
                           <Icon
                             icon="icomoon-free:quotes-right"
@@ -356,8 +342,7 @@ function Home() {
             <div className="row">
               <div className="col-6 col-md-2 mb-3">
                 <h3 className="fw-bold">Pethaven</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur uibusdam autem?
-                   Accusamus
+                <p>Trusted by families, loved by pets
                 </p>
               </div>
               <div className="col-6 col-md-2 mb-3">
@@ -372,7 +357,7 @@ function Home() {
                     </Link>
                   </li>
                   <li className="nav-item mb-2">
-                    <Link to="/" className="nav-link p-0 text-body-secondary">
+                    <Link to="/pet-list" className="nav-link p-0 text-body-secondary">
                       Pets
                     </Link>
                   </li>
@@ -411,7 +396,11 @@ function Home() {
                       className="form-control"
                       placeholder="Email address"
                     />
-                    <button className="btn btn-primary" type="button">
+                    <button className="btn btn-dark" type="button"
+                     onClick={() => {
+                       toast.success("Succesfully suscribed to our news letter");
+                     }}
+                    >
                       Subscribe
                     </button>
                   </div>
