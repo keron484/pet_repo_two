@@ -125,9 +125,77 @@ function Home() {
             </div>
           </div>
         </section>
-
         <section>
-          <h2 className="text-center fw-bold my-4">Waiting For A new Home</h2>
+        <div>
+          <h2 className="text-center fw-bold my-5">Our Services</h2>
+          <div className="container">
+            <div className="row">
+            <div className="col-lg-3">
+                <div className="card px-2 py-2 rounded-4 my-2 shadow border-none ">
+                 <div className="d-flex flex-row justify-content-center">
+                 <div className="circle my-2">
+                  <Icon icon="fluent-emoji-high-contrast:paw-prints" className="fs-1 text-white"/>
+                  </div>
+                 </div>
+                  <h2 className="text-center fs-4 fw-bold my-4">
+                  Pet Adoption Services
+                  </h2>
+                  <p className="my-0 text-start text-secondary">
+                  Find your perfect companion! We offer a variety of adoptable pets
+                   and help match you based on your lifestyle. Start your journey of love today!
+                  </p>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <div className="card px-2 py-2 rounded-4 my-2 shadow">
+                 <div className="d-flex flex-row justify-content-center">
+                 <div className="circle">
+                 <Icon icon="clarity:resource-pool-solid-badged" className="fs-1 text-white"/>
+                  </div>
+                 </div>
+                  <h2 className="text-center fs-4 fw-bold my-3">Pet Care Resources</h2>
+                  <p className="my-0 text-start text-secondary">
+                  Empower yourself with essential information! Access training tips,
+                   health care guidance, and nutrition advice to ensure the best start for your new pet
+                  </p>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <div className="card px-2 py-2 rounded-4 my-2 shadow">
+                 <div className="d-flex flex-row justify-content-center">
+                 <div className="circle">
+                 <Icon icon="streamline:health-care-2-solid" className="fs-1 text-white"/>
+                  </div>
+                 </div>
+                  <h2 className="text-center fs-4 fw-bold my-3"> Foster Care Program</h2>
+                  <p className="my-0 text-start text-secondary">
+                  Become a hero! Open your home to pets in need while they wait for adoption.
+                   Your care helps make them more adoptable and gives them a loving environment.
+                  </p>
+                </div>
+              </div>
+              <div className="col-lg-3">
+                <div className="card px-2 py-2 rounded-4 my-2 shadow">
+                 <div className="d-flex flex-row justify-content-center">
+                 <div className="circle">
+                 <Icon icon="fluent:people-community-12-filled" className="fs-1 text-white" />
+                  </div>
+                 </div>
+                  <h2 className="text-center fs-4 fw-bold my-3">
+                  Community Events
+                  </h2>
+                  <p className="my-0 text-start text-secondary">
+                  Join our pet-loving community! Participate in events like adoption drives 
+                  and workshops to promote awareness about pet adoption and responsible pet care.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+        <section>
+          <h2 className="text-center fw-bold my-5">Waiting For A new Home</h2>
           <div className="row d-flex flex-row align-items-center">
             {loading ? (
               <Spinnerlong />
@@ -157,7 +225,7 @@ function Home() {
             </div>
           </div>
         </section>
-
+       
         <section id="reviews">
           <h2 className="text-center fw-bold my-4">
             What our clients have been saying
@@ -376,10 +444,14 @@ function Home() {
               <div className="col-6 col-md-2 mb-3">
                 <h5>Address</h5>
                 <ul className="nav flex-column">
-                  <p className="my-0 ">
-                    Lorem ipsum dolor sit amet consecteturatis
+                 <div>
+                  <p>
+                  Contact Us: info@example.com | Phone: (123) 456-7890 
+                  </p>  
+                  <p>
+                  Business Hours  : Always Open 
                   </p>
-                  <span>+1 2378 4839</span>
+                 </div>
                 </ul>
               </div>
               <div className="col-md-5 offset-md-1 mb-3">
@@ -409,7 +481,7 @@ function Home() {
             </div>
             <hr className="w-100"/>
             <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4">
-              <p>© 2024 Company, Inc. All rights reserved.</p>
+              <p>© 2024 Pethaven, Inc. All rights reserved.</p>
             </div>
           </footer>
         </div>

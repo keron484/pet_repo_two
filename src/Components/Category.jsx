@@ -1,6 +1,7 @@
 import axios from "../Api/axios";
 import { useEffect, useState } from "react";
-import { scrollto } from "../Utils/functions";
+import { scrollto, reduce_array_size } from "../Utils/functions";
+import { Spinnerlong } from "./Spinner";
 function Category(){
     const [ category, setCategory ] = useState([]);
     const [ error, setError ] = useState(null);
@@ -66,3 +67,63 @@ function Category(){
     )
 }
 export default Category;
+
+export function Categorytwo(){
+    const [ loading, setLoading ] = useState(true);
+    const [ categories, setCategories ] = useState([]);
+    const [ error, setError ] = useState(null);
+    useEffect(() => {
+       const handle_fetch = async () => {
+        try{
+            const response = await axios.get('api/get-petcategory');
+            setCategories(response.data.petcategories);
+            setLoading((prevalue) => prevalue = false); 
+        } 
+        catch{
+            setError("Something went wrong !! check internet connection");
+            setLoading((prevalue) => prevalue = false);
+        }
+       }
+       handle_fetch();
+    }, [])
+     return(
+        <>
+    <div className="row mt-5">
+      <p className="fs-12">Suggested For You</p>
+      <div className="container">
+       {
+          loading ? (
+            <Spinnerlong />
+          ) : categories.length > 0 ? (
+             <>
+             {
+              reduce_array_size(categories, 0, 11).map((items) => {
+                 return(
+                  <>
+                   <button className="btn primary-bg col-lg-1 mx-1 col-xsm-2 fs-13  text-white rounded-5 my-2">
+                      {
+                        items.name
+                      }
+                   </button> 
+                  </>
+                 )
+              })
+             }
+             </>
+          ) : error ? (
+               <div className="alert alert-warning">
+                {
+                  error
+                }
+               </div>
+          ) : (
+             <div className="alert alert-danger">
+              Could'nt find any Pet Categor
+             </div>
+          )
+       }
+      </div> 
+    </div>
+        </>
+     )
+}

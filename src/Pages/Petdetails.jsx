@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "../Api/axios";
 import { filter_array } from "../Utils/functions";
@@ -95,7 +95,9 @@ function Petdetails(){
           <h1 className="fw-bold">{items.price}$</h1>
         </div>
         <div className="w-100 px-2 my-2">
+          <Link className="link w-100" to={`/decription/${items.id}`}>
             <button className="py-0  fw-bold border-none primary-bg rounded-3 text-white w-100 py-2">Begin Adoption Process</button>
+          </Link>
         </div>
     </div>
     </div>

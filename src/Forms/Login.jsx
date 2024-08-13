@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { Spinnersingle } from "../Components/Spinner";
 import { Icon } from "@iconify/react";
 function Login(){
-    const { login, error, msgerror, loading } = useAuthContext();
+    const { login, error, loading } = useAuthContext();
     const { handleSubmit, register } = useForm();
     const navigate = useNavigate();
     const handle_login = async (data) => {
@@ -15,13 +15,6 @@ function Login(){
          <div className="container">
             <div className="login-box">
                 <div className="card form-container px-3 pt-3 rounded-4">
-                    {
-                        msgerror.login && <div className="alert alert-danger mt-2 fs-12">
-                            {
-                                msgerror.login
-                            }
-                        </div>
-                    }
                     <form action="" onSubmit={handleSubmit(handle_login)}>
                     <div className="d-flex flex-row align-items-center justify-content-between my-2">
                         <p className="my-0"></p>

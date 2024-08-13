@@ -2,6 +2,7 @@ import Petcomponent from "../Components/Petcomponent";
 import Category from "../Components/Category";
 import { Spinnerlong } from "../Components/Spinner";
 import { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
 import axios from "../Api/axios";
 import '../Utils/functions';
 import { Helmet } from "react-helmet";
@@ -54,7 +55,7 @@ function Petlist(){
         {pets.map(items => {
           return (
             <div className='row'>
-              <h4 className='fw-bold my-2 text-center' id={items.name}>{items.name}</h4>
+              <h4 className='fw-bold my-2 text-center' id={items.name}> <Icon icon="fluent-emoji-high-contrast:paw-prints" className="fs-1 mx-2" color="#ffc93c"/> {items.name} <Icon icon="fluent-emoji-high-contrast:paw-prints" color="#ffc93c" className="fs-1 mx-2"/> </h4>
               {items.pets.map(pet => {
                 return (
                   <>
