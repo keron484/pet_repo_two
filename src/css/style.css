@@ -262,8 +262,12 @@ input {
     cursor: pointer;
   }
   .logo{
-     width: 100%;
+     width: 20%;
      height: 2rem;
+     background-image: url('../../public/logo/logo.png');
+     background-size: contain; /* or contain */
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .circle{
     width: 5rem;
@@ -291,10 +295,21 @@ input {
       display: none !important;
     }
     .hero{
-      height: 100dvh !important;
+      height: 120dvh !important;
+    }
+    .first-cap-text{
+      font-size: 10px;
+    }
+    .logo{
+      width: 50%;
     }
     .contact-img{
       display: none;
+    }
+  }
+  @media screen and (max-width: 320) {
+    .hero{
+      height: 350dvh !important;
     }
   }
   @media screen and (min-width: 690px){

@@ -1,4 +1,5 @@
 import {createContext, useContext, useState, useRef } from 'react';
+import toast from "react-hot-toast";
 import axios from "../Api/axios"
 const AuthContext = createContext({});
 export const AuthProvider = ({children}) => {
@@ -48,9 +49,12 @@ export const AuthProvider = ({children}) => {
         await csrf();
         try {
             await axios.post('api/create-user', data);
-              navigate("/login");
-              setLoading((prevalue) => ({...prevalue, signup:false}));
+            setLoading((prevalue) => ({...prevalue, signup:false}));
+            toast.success("Account created successfully");
+            navigate("/login");
+              
             } catch (e) {
+              toast.error("An error occured trying to create an account");
                if(e.response.status === 422){
                   setError((prevalue) => ({...prevalue, signup:e.response.data.errors }));
                   setMsgerror((prevalue) => ({...prevalue, signup:"An error occured trying to create an account" }));
@@ -75,7 +79,18 @@ export const AuthProvider = ({children}) => {
        }
     }
 
-    return <AuthContext.Provider value={{ loading,  error, msgerror, user,  login, signup, logout, getUser, passwordRecovery, aboutRef, servicesRef, reviewsRef}}>
+    return <AuthContext.Provider value={{ loading, 
+     error, 
+     msgerror, 
+     user,  
+     login, 
+     signup, 
+     logout, 
+     getUser, 
+     passwordRecovery, 
+     aboutRef, 
+     servicesRef,
+      reviewsRef}}>
         {children}
     </AuthContext.Provider>
 }

@@ -3,6 +3,7 @@ import useAuthContext from "../Context/authcontext";
 import { useForm } from "react-hook-form";
 import { Spinnersingle } from "../Components/Spinner";
 import { Icon } from "@iconify/react";
+import { Toaster } from "react-hot-toast";
 function Register(){
     const { signup, loading,  error, msgerror } = useAuthContext();
     const navigate = useNavigate();
@@ -12,8 +13,13 @@ function Register(){
     }
     return(
         <>
+        <div><Toaster/></div>
                  <div className="container">
+            <div className="d-flex flex-column">
             <div className="login-box my-5">
+            <div className="d-flex mb-4 flex-row align-items-center justify-content-center">
+                    <img src="/logo/logo.png" alt="" className="object-fit-contain w-50" />
+                </div>
                 <div className="card form-container px-3 pt-3 rounded-4">
                     {
                         msgerror.signup && <div className="alert alert-danger  fs-12">
@@ -109,6 +115,7 @@ function Register(){
                     </div>
                     </form>
                 </div>
+            </div>
             </div>
          </div>
         </>

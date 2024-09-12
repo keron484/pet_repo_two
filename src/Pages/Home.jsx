@@ -32,7 +32,7 @@ function Home() {
       <Helmet>
          <meta charSet="utf-8" />
          <title>Home</title>
-         <link rel="canonical" href="http://mysite.com/example" />
+         <link rel="canonical" href="http://Petpalsadoption.com" />
          <meta property="og:title" content="Petpalsadoption - Your Ultimate Pet Adoption Service" />
     <meta property="og:description" content="Welcome to Petpalsadoption! Discover your perfect furry friend. Join us in giving pets a loving home." />
     <meta property="og:image" content="https://yourwebsite.com/images/logo.jpg" /> 
@@ -50,7 +50,7 @@ function Home() {
               <div className="container">
               <div className="row d-flex flex-row align-items-center">
                 <div className="col-lg-5">
-                  <p className="fs-5 my-4 fw-medium">
+                  <p className="fs-5 my-4 fw-medium first-cap-text">
                   Trusted by families, loved by pets. Find your perfect companion at Petpalsadoption!
                   </p>
                   <h1 className="fw-bold">
@@ -213,7 +213,9 @@ function Home() {
                 })}
               </>
             ) : (
-              <div className="alert alert-warning">{error}</div>
+              <div className="alert alert-danger">
+                something went wrong
+              </div>
             )}
             <div className="col-lg-3">
               <Link className="link" to="/pet-list">
@@ -427,11 +429,6 @@ function Home() {
                   <li className="nav-item mb-2">
                     <Link to="/pet-list" className="nav-link p-0 text-body-secondary">
                       Pets
-                    </Link>
-                  </li>
-                  <li className="nav-item mb-2">
-                    <Link to="/" className="nav-link p-0 text-body-secondary">
-                      FAQs
                     </Link>
                   </li>
                   <li className="nav-item mb-2">

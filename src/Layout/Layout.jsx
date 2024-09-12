@@ -15,10 +15,9 @@ function Layout(){
         <>
         <div><Toaster/></div>
    <nav className="navbar navbar-expand-lg shadow-sm fixed-top bg-white">
-  <div className="container d-flex flex-row">
-    <Link className="navbar-brand fw-bold" to="/">
-     <img src="./logo/logo.png" alt="" className="logo"/>
-    </Link>
+  <div className="container d-flex flex-row align-items-center">
+    <div  className="logo">    
+    </div>
     <Link className="ms-auto d-sm-none link nav-link" to="/search">
     <Icon icon="line-md:search" className="fs-1   nav-link"/>
     </Link>
@@ -46,6 +45,27 @@ function Layout(){
         <li className="nav-item mx-2">
           <NavLink className={({isActive}) => isActive ? "nav-link link-active c-primary" : "nav-link link-inactive"} to="/favourites">Favourites</NavLink>
         </li>
+        {
+          user === null ? <>
+           <Link to="/login" className="link display-lg-none">
+           <li className="nav-item mx-2">
+            <button className="btn primary-bg text-white fs-12 py-2 px-3">Create Account</button>
+        </li>
+           </Link>
+          </> : 
+          <>
+          <li className="nav-item mx-2">
+           <Link className="link" to="/profile">
+            <span className="nav-link fs-6">Profile</span>
+           </Link>
+        </li>
+        <Link to="/pet-list" className="link display-lg-none">
+           <li className="nav-item mx-2">
+            <button className="btn primary-bg text-white fs-12 py-2 px-3">Find A Pet</button>
+        </li>
+           </Link>
+          </>
+        }
         <li className="nav-item mx-2">
         <NavLink className="link d-flex flex-row align-items-center display-sm-none" to="/search">
         <Icon icon="line-md:search" className="fs-1  nav-link"/>
@@ -84,3 +104,4 @@ function Layout(){
     )
 }
 export default Layout;
+

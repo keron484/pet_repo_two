@@ -13,7 +13,11 @@ function Login(){
     return(
         <>
          <div className="container">
+            <div className="d-flex flex-column">
             <div className="login-box">
+                <div className="d-flex mb-4 flex-row align-items-center justify-content-center">
+                    <img src="/logo/logo.png" alt="" className="object-fit-contain w-50" />
+                </div>
                 <div className="card form-container px-3 pt-3 rounded-4">
                     <form action="" onSubmit={handleSubmit(handle_login)}>
                     <div className="d-flex flex-row align-items-center justify-content-between my-2">
@@ -87,6 +91,7 @@ function Login(){
                     </div>
                     </form>
                 </div>
+            </div>
             </div>
          </div>
         </>

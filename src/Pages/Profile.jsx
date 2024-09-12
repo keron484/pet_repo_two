@@ -47,17 +47,17 @@ function Profile(){
                 <Helmet>
         <meta charSet="utf-8" />
          <title>My Account</title>
-         <link rel="canonical" href="https://pethaven.com/" />
-         <meta property="og:title" content="PetHaven - Your Ultimate Pet Adoption Service" />
-         <meta property="og:description" content="Welcome to PetHaven! Discover your perfect furry friend. Join us in giving pets a loving home." />
+         <link rel="canonical" href="https://petpalsadoption.com/" />
+         <meta property="og:title" content="Petpalsadoption - Your Ultimate Pet Adoption Service" />
+         <meta property="og:description" content="Welcome to Petpalsadoption! Discover your perfect furry friend. Join us in giving pets a loving home." />
          <meta property="og:image" content="https://yourwebsite.com/images/logo.jpg" /> 
-         <meta property="og:url" content="https://pethaven.com/" />
+         <meta property="og:url" content="https://petpalsadoption.com/" />
          <meta property="og:type" content="website" />
          <meta name="twitter:card" content="summary_large_image" />
-         <meta name="twitter:title" content="PetHaven - Your Ultimate Pet Adoption Service" />
-         <meta name="twitter:description" content="Welcome to PetHaven! Discover your perfect furry friend. Join us in giving pets a loving home." />
-         <meta name="twitter:image" content="https://yourwebsite.com/images/logo.jpg" /> 
-         <meta name="twitter:url" content="https://pethaven.com/" />
+         <meta name="twitter:title" content=" Petpalsadoption - Your Ultimate Pet Adoption Service" />
+         <meta name="twitter:description" content="Welcome to Petpalsadoption! Discover your perfect furry friend. Join us in giving pets a loving home." />
+         <meta name="twitter:image" content="https://petpalsadoption.com/images/logo.jpg" /> 
+         <meta name="twitter:url" content="https://petpalsadoption.com/" />
         </Helmet>
             <>
      {isloading ? (
@@ -126,7 +126,7 @@ function Profile(){
                 <div className="d-flex flex-row align-items-center mx-2  justify-content-between my-1">
                   <p className="fw-bolder">Change Password</p>
                   <p>
-                    <Icon icon="gravity-ui:chevron-right" className="fs-5" />
+                    <Icon icon="gravity-ui:chevron-right" className="fs-3" />
                   </p>
                 </div>
                 <div className="d-flex flex-row align-items-center mx-2  justify-content-between my-1">
@@ -135,12 +135,12 @@ function Profile(){
                     <Icon icon="gravity-ui:chevron-right" className="fs-3" />
                   </p>
                 </div>
-                <div className="d-flex flex-row align-items-center mx-1 justify-content-between py-2" onClick={() => {
+                <div className="d-flex flex-row align-items-center mx-1 justify-content-between py-2 pointer" onClick={() => {
                    handle_logout();
                 }}>
-                  <p className="my-0">Logout</p>
+                  <p className="my-0 fw-bolder">Logout</p>
                   <button className="btn badge">
-                    <Icon icon="tabler:logout" className="fs-2 c-red" />
+                    <Icon icon="tabler:logout" className="fs-3 c-red" />
                   </button>
                 </div>
               </div>

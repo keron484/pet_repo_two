@@ -16,6 +16,8 @@ const Favourites = React.lazy(() => import('../Pages/Favourites'));
 const Description = React.lazy(() => import('../Pages/Description'));
 const Confirmation = React.lazy(() => import('../Pages/Confirmation'));
 const Orders = React.lazy(() => import('../Pages/Orders'));
+const Passwordreset = React.lazy(()  => import('../Forms/password-reset'));
+const Verifyotp = React.lazy(() => import('../Forms/verify-otp'));
 function Link(){
     return(
          <BrowserRouter>
@@ -25,6 +27,18 @@ function Link(){
                     <Login />
                     </Suspense> 
                     }>    
+                </Route>
+                <Route path="/password-reset" element={
+                  <Suspense fallback={<Spinnerlong />}>
+                     <Passwordreset />
+                  </Suspense>
+                }>
+                </Route>
+                <Route path="/verify-otp" element={
+                  <Suspense fallback={<Spinnerlong />}>
+                    <Verifyotp />
+                  </Suspense>
+                }>
                 </Route>
                 <Route path="/confrimation" element={
                  <Suspense fallback={<Spinnerlong />}>
