@@ -35,8 +35,8 @@ function Profile(){
            Authorization: `Bearer ${localStorage.getItem('token')}`
         }
        });
-      window.location.reload();
-      toast.success("User succesfully logout")
+      toast.success("User succesfully logout");
+      setUser((prevalue) => prevalue = null);
      }
      catch(e){
        toast.error("Opps something went wrong please try again");
@@ -71,15 +71,17 @@ function Profile(){
         {
           user == null ? (
                <>
+               <div className="container pt-5 mt-5">
                <div className="contact-box">
                <div className="alert alert-warning mt-5">
                 it appears your logged out click the button below to login
                </div>
                <Link className="link w-100" to="/login">
-               <button className="btn btn-success w-100">
+               <button className="primary-bg py-2 border-none rounded-3 shadow-sm fw-bold text-white w-100">
                 Login
                </button>
                </Link>
+               </div>
                </div>
                </>
           ) : (

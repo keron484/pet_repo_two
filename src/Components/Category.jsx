@@ -68,7 +68,7 @@ function Category(){
 }
 export default Category;
 
-export function Categorytwo(){
+export function Categorytwo(props){
     const [ loading, setLoading ] = useState(true);
     const [ categories, setCategories ] = useState([]);
     const [ error, setError ] = useState(null);
@@ -100,7 +100,10 @@ export function Categorytwo(){
               reduce_array_size(categories, 0, 11).map((items) => {
                  return(
                   <>
-                   <button className="btn primary-bg col-lg-1 mx-1 col-xsm-2 fs-13  text-white rounded-5 my-2">
+                   <button 
+                   className="btn primary-bg col-lg-1 mx-1 col-xsm-2 fs-13  text-white rounded-5 my-2"
+                   onClick={() => { props.search_func(items.name) }}
+                   >
                       {
                         items.name
                       }
@@ -118,7 +121,7 @@ export function Categorytwo(){
                </div>
           ) : (
              <div className="alert alert-danger">
-              Could'nt find any Pet Categor
+              Something went wrong check internet connectionnad try again
              </div>
           )
        }

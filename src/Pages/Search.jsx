@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import axios from 'axios';
 import Petcomponent from "../Components/Petcomponent";
 import Frequentlysearched from "../Components/Frequentlysearched";
-import { Categorytwo } from "../Components/Category";
 import { Helmet } from "react-helmet";
 import debounce from 'lodash.debounce';
 function Search(){
@@ -82,8 +81,8 @@ function Search(){
          <meta name="twitter:url" content="https://pethaven.com/" />
         </Helmet>
        <div className="container pt-5 mt-5">
-      <div className="search-section mt-5">
-       <div className="d-flex flex-row align-items-center justify-content-center w-100 mt-5">
+      <div className="search-section">
+       <div className="d-flex flex-row align-items-center justify-content-center w-100">
             <div className="d-block w-75 ">
           <div className="input-group w-100 mb-3 input-group-lg mt-5">
             <span className="input-group-text primary-bg" id="inputGroup-sizing-default">
@@ -97,31 +96,12 @@ function Search(){
                  onChange={ handleInputChange }
             />
               </div>
-            {searchTerm && (
-                    <div className="card border-none mt-3 rounded-4 px-2 py-2  text-white w-100 primary-bg">
-                        {pets.map((items) => (
-                            <div className="d-flex flex-row align-items-center justify-content-between px-2 ">
-                                <p className="my-1 fs-12" onClick={() => setSearchTerm(items.name)}>{items.name} <span className="mx-2"> {Number(items.price).toFixed(0)}</span> <span> {items.breed} </span> </p>
-                                <p className="my-1"><Icon icon="gravity-ui:chevron-right" className="fs-3"/></p>
-                            </div>
-                        ))}
-                    </div>
-                )}
             </div>
+       </div>
     </div>
-    </div>
-   {
-     searchTerm === '' ? (
-       <>
-       <Categorytwo />
-       </>
-     ) : (
-       null
-     )
-   }
 
  {
-    searchTerm === '' ? (
+    pets.length < 1 || pets.length === 0 ? (
         <>
      <p className="text-start mt-5 fw-bold">
     Frequently searched

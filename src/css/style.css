@@ -121,7 +121,9 @@ body{
     background-color: var(--darker-white);
     outline: none;
 }
-
+.cursor_pointer{
+  cursor: pointer;
+}
 .hero-image{
     height: 50dvh;
     width: 100%;

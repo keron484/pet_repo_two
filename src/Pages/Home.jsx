@@ -33,16 +33,16 @@ function Home() {
          <meta charSet="utf-8" />
          <title>Home</title>
          <link rel="canonical" href="http://mysite.com/example" />
-         <meta property="og:title" content="PetHaven - Your Ultimate Pet Adoption Service" />
-    <meta property="og:description" content="Welcome to PetHaven! Discover your perfect furry friend. Join us in giving pets a loving home." />
+         <meta property="og:title" content="Petpalsadoption - Your Ultimate Pet Adoption Service" />
+    <meta property="og:description" content="Welcome to Petpalsadoption! Discover your perfect furry friend. Join us in giving pets a loving home." />
     <meta property="og:image" content="https://yourwebsite.com/images/logo.jpg" /> 
-    <meta property="og:url" content="https://pethaven.com/" />
+    <meta property="og:url" content="https://Petpalsadoption.com/" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PetHaven - Your Ultimate Pet Adoption Service" />
-    <meta name="twitter:description" content="Welcome to PetHaven! Discover your perfect furry friend. Join us in giving pets a loving home." />
+    <meta name="twitter:title" content="Petpalsadoption - Your Ultimate Pet Adoption Service" />
+    <meta name="twitter:description" content="Welcome to Petpalsadoption! Discover your perfect furry friend. Join us in giving pets a loving home." />
     <meta name="twitter:image" content="https://yourwebsite.com/images/logo.jpg" /> 
-    <meta name="twitter:url" content="https://pethaven.com/" />
+    <meta name="twitter:url" content="https://Petpalsadoption.com/" />
       </Helmet>
       <div className="container">
         <section>
@@ -51,16 +51,16 @@ function Home() {
               <div className="row d-flex flex-row align-items-center">
                 <div className="col-lg-5">
                   <p className="fs-5 my-4 fw-medium">
-                  Trusted by families, loved by pets. Find your perfect companion at PetHaven!
+                  Trusted by families, loved by pets. Find your perfect companion at Petpalsadoption!
                   </p>
                   <h1 className="fw-bold">
-                  Your new <span style={{ color:"#FF67B9" }}>best friend</span> awaits at PetHaven
+                  Your new <span style={{ color:"#FF67B9" }}>best friend</span> awaits at Petpalsadoption
                   where <span style={{ color:"#FF67B9" }}> love </span>, <span style={{ color:"#FF67B9" }}>care</span>, and <span style={{ color:"#FF67B9" }}>
                   trust
                     </span> unite!
                   </h1>
                   <p className="fs-6">
-                  At PetHaven, we match loving families with wonderful pets. 
+                  At Petpalsadoption, we match loving families with wonderful pets. 
                   Our team ensures each animal is healthy and ready for adoption!
                   </p>
                   <NavLink to="/pet-list" className="link w-50">
@@ -97,7 +97,7 @@ function Home() {
               <div className="col-lg-7">
                 <h4 className="text-start fw-bold mt-4">About Us</h4>
                 <p>
-                At PetHaven, we believe every pet deserves a loving home. 
+                At Petpalsadoption, we believe every pet deserves a loving home. 
                 Our mission is to make the online pet adoption process easy 
                 and reliable. Our team carefully vets each animal to ensure they 
                 are healthy and ready to find their forever home.
@@ -114,7 +114,7 @@ function Home() {
                 pet owners to help you navigate pet ownership successfully
                 </p>
                 <p>
-                With secure technology and a focus on transparency, PetHaven makes
+                With secure technology and a focus on transparency, Petpalsadoption makes
                  adoption straightforward and trustworthy. Join us in creating lasting bonds
                   between pets and their loving families!
                 </p>
@@ -254,9 +254,9 @@ function Home() {
                           />
                         </span>
                         I cannot express how grateful I am to have found my furry best friend through
-                        PetHaven! The staff was incredibly caring and knowledgeable, helping us find
+                        Petpalsadoption! The staff was incredibly caring and knowledgeable, helping us find
                         the perfect match for our family. Our dog, Bella, has brought so much joy 
-                        into our lives. Thank you, PetHaven!
+                        into our lives. Thank you, Petpalsadoption!
                         <span className="mx-1">
                           <Icon
                             icon="icomoon-free:quotes-right"
@@ -309,7 +309,7 @@ function Home() {
                             className="fs-4"
                           />
                         </span>
-                        PetHaven made the adoption process smooth and easy. The team was very 
+                        Petpalsadoption made the adoption process smooth and easy. The team was very 
                         supportive and answered all our questions. We adopted Max, a playful 
                         tabby cat, and he has quickly become a beloved member of our family. 
                         Highly recommend!
@@ -365,7 +365,7 @@ function Home() {
                             className="fs-4"
                           />
                         </span>
-                        I had a wonderful experience at PetHaven! The facilities were clean,
+                        I had a wonderful experience at Petpalsadoption! The facilities were clean,
                          and the animals were well cared for. The staff took the time to 
                          understand what I was looking for, and I found Lucy, the sweetest 
                          Labrador. She fits right in with our family!
@@ -446,7 +446,7 @@ function Home() {
                 <ul className="nav flex-column">
                  <div>
                   <p>
-                  Contact Us: info@example.com | Phone: (123) 456-7890 
+                  Contact Us: Petpalsadoption.com
                   </p>  
                   <p>
                   Business Hours  : Always Open 
