@@ -54,7 +54,7 @@ function Layout(){
            </Link>
           </> : 
           <>
-          <li className="nav-item mx-2">
+          <li className="nav-item mx-2 display-lg-none">
            <Link className="link" to="/profile">
             <span className="nav-link fs-6">Profile</span>
            </Link>
@@ -81,7 +81,7 @@ function Layout(){
            </Link>
           </> : 
           <>
-          <li className="nav-item mx-2">
+          <li className="nav-item mx-2 display-sm-none">
            <Link className="link" to="/profile">
             <span className="nav-link fs-6">Profile</span>
            </Link>

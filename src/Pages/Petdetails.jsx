@@ -126,8 +126,8 @@ function Petdetails(){
             </div>
         </div>
         <div className="col-lg-6">
-             <div className="card">
-                <img src={require(`../../../server/public/petimages/${items.pet_image}`)} alt="" className="w-100 details-img"/>
+             <div className="card border-none">
+                <img src={`https://server.petpalsadoption.com/public/petimages/${items.pet_image}`} alt="" className="w-100 details-img"/>
              </div>
          </div>
         <div className="w-100 px-2 d-flex flex-row align-items-center justify-content-between">

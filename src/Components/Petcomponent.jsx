@@ -34,7 +34,7 @@ function Petcomponent(props) {
           <div className="card rounded-3 p-1 border-none shadow ">
             <div>
               <img
-                src={require(`../../../server/public/petimages/${props.pet_image}`)}
+                src={`https://server.petpalsadoption.com/public/petimages/${props.pet_image}`}
                 alt=""
                 className="w-100 rounded-top-3 pet-image"
               />

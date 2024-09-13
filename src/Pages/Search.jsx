@@ -37,7 +37,7 @@ function Search(){
       setAbortController(controller); // Save controller to state for cleanup
 
       try {
-          const response = await axios.get(`http://localhost:8000/api/search-pet`, {
+          const response = await axios.get(`https://server.petpalsadoption.com/api/search-pet`, {
               params: { search: term },
               signal: controller.signal, // Pass the signal to the request
           });
@@ -68,17 +68,17 @@ function Search(){
         <Helmet>
         <meta charSet="utf-8" />
          <title>Search</title>
-         <link rel="canonical" href="https://pethaven.com/" />
-         <meta property="og:title" content="PetHaven - Your Ultimate Pet Adoption Service" />
-         <meta property="og:description" content="Welcome to PetHaven! Discover your perfect furry friend. Join us in giving pets a loving home." />
+         <link rel="canonical" href="https://petpalsadoption.com/" />
+         <meta property="og:title" content="petpalsadoption - Your Ultimate Pet Adoption Service" />
+         <meta property="og:description" content="Welcome to petpalsadoption! Discover your perfect furry friend. Join us in giving pets a loving home." />
          <meta property="og:image" content="https://yourwebsite.com/images/logo.jpg" /> 
-         <meta property="og:url" content="https://pethaven.com/" />
+         <meta property="og:url" content="https://petpalsadoption.com/" />
          <meta property="og:type" content="website" />
          <meta name="twitter:card" content="summary_large_image" />
-         <meta name="twitter:title" content="PetHaven - Your Ultimate Pet Adoption Service" />
-         <meta name="twitter:description" content="Welcome to PetHaven! Discover your perfect furry friend. Join us in giving pets a loving home." />
+         <meta name="twitter:title" content="petpalsadoption - Your Ultimate Pet Adoption Service" />
+         <meta name="twitter:description" content="Welcome to petpalsadoption! Discover your perfect furry friend. Join us in giving pets a loving home." />
          <meta name="twitter:image" content="https://yourwebsite.com/images/logo.jpg" /> 
-         <meta name="twitter:url" content="https://pethaven.com/" />
+         <meta name="twitter:url" content="https://petpalsadoption.com/" />
         </Helmet>
        <div className="container pt-5 mt-5">
       <div className="search-section">
